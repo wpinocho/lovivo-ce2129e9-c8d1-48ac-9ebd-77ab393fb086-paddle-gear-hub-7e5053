@@ -100,45 +100,53 @@ export const EcommerceTemplate = ({
   )
 
   const footer = (
-    <div className={`bg-black text-white py-12 ${footerClassName}`}>
+    <div className={`bg-secondary text-secondary-foreground py-12 ${footerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <BrandLogoLeft />
-            <p className="mt-4 text-white/70">
-              Your trusted online store
+            <div className="mb-4">
+              <h3 className="text-xl font-bold">PaddleGear</h3>
+            </div>
+            <p className="text-secondary-foreground/70">
+              Premium pickleball & padel equipment for players at every level
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">Links</h3>
+            <h3 className="font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
               <Link 
                 to="/" 
-                className="block text-white/70 hover:text-white transition-colors"
+                className="block text-secondary-foreground/70 hover:text-secondary-foreground transition-colors"
               >
-                Home
+                Shop Paddles
               </Link>
               <Link 
                 to="/blog" 
-                className="block text-white/70 hover:text-white transition-colors"
+                className="block text-secondary-foreground/70 hover:text-secondary-foreground transition-colors"
               >
-                Blog
+                Blog & Tips
               </Link>
+              <button
+                onClick={() => document.getElementById('level-guide')?.scrollIntoView({ behavior: 'smooth' })}
+                className="block text-secondary-foreground/70 hover:text-secondary-foreground transition-colors text-left"
+              >
+                Find Your Level
+              </button>
             </div>
           </div>
 
           {/* Social Links */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">Follow Us</h3>
+            <h3 className="font-semibold mb-4">Follow Us</h3>
             <SocialLinks />
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/70">
-          <p>&copy; 2024 Your Store. All rights reserved.</p>
+        <div className="mt-8 pt-8 border-t border-secondary-foreground/20 text-center text-secondary-foreground/70">
+          <p>&copy; 2024 PaddleGear. All rights reserved.</p>
         </div>
       </div>
     </div>
